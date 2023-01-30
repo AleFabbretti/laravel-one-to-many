@@ -33,6 +33,17 @@
                     <textarea class="form-control" id="description" name="description" rows="10"
                         placeholder="inserisci la descrizione">{{ old('description', $project->description) }}</textarea>
                 </div>
+                <div class="mb-3">
+                    <label for="types" class="form-label">Tipo</label>
+                    <select class="form-select" name="type_id" id="type_id">
+                        <option value="">Senza Categoria</option>
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}"
+                                {{ old('type_id', $project->type_id) == $type->id ? 'selected' : '' }}>
+                                {{ $type->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
                 <button type="submit" class="btn btn-primary">Modifica</button>
             </form>
         </div>

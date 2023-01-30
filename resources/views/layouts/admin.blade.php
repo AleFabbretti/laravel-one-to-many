@@ -67,6 +67,13 @@
                                     Project
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.type.index' ? 'bg-secondary' : '' }}"
+                                    href="{{ route('admin.types.index') }}">
+                                    <i class="fa-solid fa-font-awesome fa-lg fa-fw"></i>
+                                    Type
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>

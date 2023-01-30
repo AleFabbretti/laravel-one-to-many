@@ -4,6 +4,7 @@
     <div class="container">
         <div class="py-4">
             <h1>{{ $project->title }}</h1>
+            <h3>Tipo: {{ $project->type?->name ?: 'Nessun tipo associato' }}</h3>
         </div>
         <div class="my-4">
             <div class="text-center">
