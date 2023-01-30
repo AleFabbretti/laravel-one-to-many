@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,7 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
         return view('admin.dashboard');
     })->name('dashboard');
     Route::resource('project', ProjectController::class)->parameters(['project' => 'project:slug']);
+    Route::resource('types', TypeController::class)->parameters(['types' => 'type:slug']);
 });
 
 require __DIR__.'/auth.php';

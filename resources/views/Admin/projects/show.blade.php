@@ -7,7 +7,7 @@
         </div>
         <div class="my-4">
             <div class="text-center">
-                @if ($project->$cover_image)
+                @if ($project->cover_image)
                     <img class="w-25" src="{{ asset("storage/$project->$cover_image") }}" alt="{{ $project->$title }}">
                 @endif
             </div>
