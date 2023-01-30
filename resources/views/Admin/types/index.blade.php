@@ -16,7 +16,6 @@
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Slug</th>
-                <th scope="col">Cliente</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -26,7 +25,6 @@
                     <td>{{ $type->id }}</td>
                     <td>{{ $type->name }}</td>
                     <td>{{ $type->slug }}</td>
-                    <td>{{ $type->company }}</td>
                     <td>
                         <a href="{{ route('admin.types.show', $type->slug) }}" class="btn btn-success"><i
                                 class="fa-solid fa-eye"></i></a>
